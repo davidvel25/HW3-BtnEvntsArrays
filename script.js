@@ -61,7 +61,7 @@ document.getElementById("button2").addEventListener("click", function(){
 });
 
 
-document.getElementById("bt3").addEventListener("click", RaiseToForth);
+document.getElementById("btn3").addEventListener("click", RaiseToForth);
 
 function square(){
     newArray = origArray.map(squareIt);
