@@ -43,22 +43,70 @@ function firstBtn(){
 //     document.getElementById(bt3) = origArray[2];
 // });
 
-let message = "nice!";
+let origArray = [2,3,4];
 
-document.addEventListener("DOMContentLoaded", function(event){
-    document.getElementById("button1").addEventListener("click", function(){
-        document.getElementById("txt1").value = "success";
-    });
-
-    document.getElementById("button2").addEventListener("click", function(){
-        DoSomething();
-    });
-
-    document.getElementById("button3").addEventListener("click", function(){
-        document.getElementById("txt1").value = message;
-    });
+document.addEventListener('DOMContentLoaded', function(event) {
+    console.log('DOM fully loaded and parsed');
+    document.getElementById("tb1") = origArray[0];
+    document.getElementById("tb2") = origArray[1];
+    document.getElementById("tb3") = origArray[2];
 });
 
-function doSomething(){
-    console.log("doing something");
+document.getElementById("button2").addEventListener("click", function(){
+    console.log('DOM fully loaded and parsed');
+    newArray.origArray(cubeIt);
+    document.getElementById("tb1") = origArray[0];
+    document.getElementById("tb2") = origArray[1];
+    document.getElementById("tb3") = origArray[2];
+});
+
+
+document.getElementById("bt3").addEventListener("click", RaiseToForth);
+
+function square(){
+    newArray = origArray.map(squareIt);
+    document.getElementById("tb1").value = newArray[0];
+    document.getElementById("tb2").value = newArray[1];
+    document.getElementById("tb3").value = newArray[2];
 }
+
+function squareIt(element){
+    return Math.pow(element, 2);
+}
+
+function cubeIt(element){
+    return Math.pow(element, 3);
+}
+
+function ToTheFourth(){
+    newArray = origArray.map(fourthIt);
+    document.getElementById("tb1").value = newArray[0];
+    document.getElementById("tb2").value = newArray[1];
+    document.getElementById("tb3").value = newArray[2];
+}
+
+function fourthIt(element){
+    return Math.pow(element, 4);
+}
+
+
+
+// let message = "nice!";
+
+// document.addEventListener("DOMContentLoaded", function(event){
+//     document.getElementById("button1").addEventListener("click", function(){
+//         document.getElementById("txt1").value = "success";
+//     });
+
+//     document.getElementById("button2").addEventListener("click", function(){
+//         DoSomething();
+//     });
+
+//     document.getElementById("button3").addEventListener("click", function(){
+//         document.getElementById("txt1").value = message;
+//     });
+// });
+
+// function doSomething(){
+//     console.log("doing something");
+//}
